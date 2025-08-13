@@ -1,1 +1,1 @@
-pyinstaller --onefile --noconsole --add-data "remap_mouse.json;." --name mousemap mousemap.py
+pyinstaller --onefile mousemap.py

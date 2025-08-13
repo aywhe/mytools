@@ -1,0 +1,17 @@
+{
+    "replacement_map": {
+        "k": "z",
+        ";": "shift"
+    },
+    "mouse_map": {
+        "j":"mouse_left_button",
+        "u":"mouse_right_button",
+        "i":"mouse_middle_button",
+        "o":"mouse_scroll_up",
+        "l":"mouse_scroll_down",
+        "g":"mouse_move_left",
+        "h":"mouse_move_right",
+        "y":"mouse_move_up",
+        "b":"mouse_move_down"
+    }
+}
