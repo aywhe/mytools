@@ -1,8 +1,0 @@
-{
-    "target_window_title": "game",
-    "replacement_map": {
-        "a": "b",
-        "left": "right",
-        "up": "down"
-    }
-}

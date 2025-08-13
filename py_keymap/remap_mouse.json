@@ -1,0 +1,13 @@
+{
+    "replacement_map": {
+        "j":"mouse_left_click",
+        "u":"mouse_right_click",
+        "i":"mouse_middle_click",
+        "o":"mouse_scroll_up",
+        ";":"mouse_scroll_down",
+        "g":"mouse_move_left",
+        "h":"mouse_move_right",
+        "y":"mouse_move_up",
+        "b":"mouse_move_down"
+    }
+}

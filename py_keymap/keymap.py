@@ -3,6 +3,7 @@ keymap.py
 按键精灵
 '''
 import keyboard
+import mouse
 import pprint
 import json
 
@@ -31,6 +32,7 @@ def map_keys(config_file):
 
     for key,val in replacement_map.items():
         keyboard.remap_key(key, val)
+    
 
     print("程序已启动，按 Ctrl+C 退出。")
 
