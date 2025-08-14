@@ -14,6 +14,7 @@
         "y":"mouse_move_up",
         "b":"mouse_move_down"
     },
+    "mouse_move_distance":100,
     "mouse_position":{
         "g":[0,0],
         "h":[0,0],

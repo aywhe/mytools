@@ -26,9 +26,9 @@ def remap_mouse_position(key, position):
         return False
     return keyboard.hook_key(key, handler, suppress=True)
 
+MOVE_DISTANCE = 10      # 鼠标每次移动的像素距离
+SCROLL_AMOUNT = 1       # 滚轮每次滚动的"格数"
 def remap_mouse(key, mouse_action):
-    MOVE_DISTANCE = 10      # 鼠标每次移动的像素距离
-    SCROLL_AMOUNT = 1       # 滚轮每次滚动的"格数"
     def handler(event):
         if event.event_type == keyboard.KEY_DOWN:
             match mouse_action:
@@ -98,6 +98,8 @@ def map_keys(config_file):
         for key,val in replacement_map.items():
             keyboard.remap_key(key, val)
     # 鼠标按键和移动
+    MOVE_DISTANCE = config.get('mouse_move_distance', 50)
+    SCROLL_AMOUNT = config.get('mouse_scroll_amount', 1)
     mouse_map = config.get('mouse_map', {})
     if mouse_map:
         print("remap mouse: ")

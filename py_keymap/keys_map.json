@@ -10,6 +10,7 @@
         "o":"mouse_scroll_up",
         "l":"mouse_scroll_down"
     },
+    "mouse_move_distance":100,
     "mouse_position":{
         "g":[0, 457],
         "h":[1462, 457],
