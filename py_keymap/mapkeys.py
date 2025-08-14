@@ -98,8 +98,11 @@ def map_keys(config_file):
         for key,val in replacement_map.items():
             keyboard.remap_key(key, val)
     # 鼠标按键和移动
+    global MOVE_DISTANCE, SCROLL_AMOUNT
     MOVE_DISTANCE = config.get('mouse_move_distance', 50)
+    print('mouse move distance: ', MOVE_DISTANCE)
     SCROLL_AMOUNT = config.get('mouse_scroll_amount', 1)
+    print('mouse scroll amount: ', SCROLL_AMOUNT)
     mouse_map = config.get('mouse_map', {})
     if mouse_map:
         print("remap mouse: ")
