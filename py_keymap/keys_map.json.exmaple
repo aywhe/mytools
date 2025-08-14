@@ -8,12 +8,16 @@
         "u":"mouse_right_button",
         "i":"mouse_middle_button",
         "o":"mouse_scroll_up",
-        "l":"mouse_scroll_down"
+        "l":"mouse_scroll_down",
+        "g":"mouse_move_left",
+        "h":"mouse_move_right",
+        "y":"mouse_move_up",
+        "b":"mouse_move_down"
     },
     "mouse_position":{
-        "g":[0, 457],
-        "h":[1462, 457],
-        "y":[731, 0],
-        "b":[731, 914]
+        "g":[0,0],
+        "h":[0,0],
+        "y":[0,0],
+        "b":[0,0]
     }
 }
