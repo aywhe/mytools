@@ -19,12 +19,13 @@ def load_config(config_file):
     except json.JSONDecodeError: 
         print("配置文件格式错误！") 
         return None
+SUPPRESS = {}
 def remap_mouse_position(key, position):
     def handler(event):
         if event.event_type == keyboard.KEY_DOWN:
             mouse.move(position[0], position[1], absolute=True)
         return False
-    return keyboard.hook_key(key, handler, suppress=True)
+    return keyboard.hook_key(key, handler, suppress=SUPPRESS.get(key, True))
 
 MOVE_DISTANCE = 10      # 鼠标每次移动的像素距离
 SCROLL_AMOUNT = 1       # 滚轮每次滚动的"格数"
@@ -81,7 +82,7 @@ def remap_mouse(key, mouse_action):
                 case _:
                     pass
         return False
-    return keyboard.hook_key(key, handler, suppress=True)
+    return keyboard.hook_key(key, handler, suppress=SUPPRESS.get(key, True))
 
 def map_keys(config_file):
     """只修改按键""" 
@@ -90,6 +91,10 @@ def map_keys(config_file):
         return # 配置加载失败，退出
     
     # 监听所有键盘事件并传递配置
+    global SUPPRESS
+    SUPPRESS = config.get('suppress', {})
+    print("suppress: ")
+    pprint.pprint(SUPPRESS)
     # 按键
     replacement_map = config.get('replacement_map', {})
     if replacement_map:

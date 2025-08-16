@@ -10,6 +10,12 @@
         "o":"mouse_scroll_up",
         "l":"mouse_scroll_down"
     },
+    "suppress":{
+        "g":false,
+        "h":false,
+        "y":false,
+        "b":false
+    },
     "mouse_move_distance":100,
     "mouse_position":{
         "g":[0, 457],

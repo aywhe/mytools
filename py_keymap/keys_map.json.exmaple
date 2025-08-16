@@ -3,6 +3,12 @@
         "k": "z",
         ";": "shift"
     },
+    "suppress":{
+        "g":false,
+        "h":false,
+        "y":false,
+        "b":false
+    },
     "mouse_map": {
         "j":"mouse_left_button",
         "u":"mouse_right_button",
